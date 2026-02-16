@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <title data-i18n="register.page_title"></title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/css/intlTelInput.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+<style>
+.input-wrap{position:relative;}
+.eye-btn{position:absolute;top:50%;transform:translateY(-50%);background:transparent;border:0;padding:0 14px;font-size:16px;cursor:pointer;color:rgba(255,255,255,.75);}
+html[dir="rtl"] .eye-btn{left:10px;right:auto;}
+html[dir="ltr"] .eye-btn{right:10px;left:auto;}
+</style>
+</head>
+<body>
+  <main class="container">
+    <div class="shell">
+      <div class="brand">
+        <a class="logo" href="register.html">
+          <div class="badge">S</div>
+          <div class="title">
+            <strong data-i18n="register.page_title"></strong>
+          </div>
+        </a>
+        <button class="langSwitch" id="langToggle" type="button" aria-label="Language">AR</button>
+      </div>
+
+      <section class="card">
+        <div class="head">
+          <h1 class="h1" data-i18n="register.h1"></h1>
+          
+        </div>
+
+        <div class="body">
+
+          <div class="field">
+            <div class="label">
+              <span data-i18n="common.phone"></span>
+              
+            </div>
+            <input id="phone" class="input" inputmode="tel" autocomplete="tel" data-i18n-placeholder="" data-i18n-placeholder="register.phone_ph" />
+            </div>
+
+          <div class="field">
+            <div class="label"><span data-i18n="common.password"></span></div>
+            <div class="input-wrap"><input id="password" class="input" type="password" autocomplete="new-password" placeholder="" /><button id="togglePass" class="eye-btn" type="button" aria-label="Toggle password">👁</button></div>
+          </div>
+
+          <div class="field">
+            <div class="label"><span data-i18n="register.password2"></span></div>
+            <div class="input-wrap"><input id="password2" class="input" type="password" autocomplete="new-password" placeholder="" /><button id="togglePass2" class="eye-btn" type="button" aria-label="Toggle password">👁</button></div>
+          </div>
+
+          <div class="field">
+            <div class="label"><span data-i18n="register.invite_code"></span></div>
+            <input id="invite" class="input" autocomplete="off" data-i18n-placeholder="" data-i18n-placeholder="register.invite_ph" />
+            <div class="hint" data-i18n="register.invite_hint"></div>
+          </div>
+
+          <div class="field">
+            <div class="label">
+              <span data-i18n="register.captcha"></span>
+              <a id="refreshCaptcha" class="mini" href="#" data-i18n="register.captcha_refresh">تغيير</a>
+            </div>
+            <div class="row">
+              <div class="grow input" style="display:flex;align-items:center;justify-content:center;">
+                <span class="code" id="captchaView" style="display:block;min-width:120px;text-align:center;letter-spacing:10px;white-space:nowrap;">0000</span>
+              </div>
+              <input id="captcha" class="input" inputmode="numeric"  placeholder="" data-i18n-placeholder="register.captcha_ph" />
+            </div>
+            </div>
+
+          <button id="register" class="btn" type="button" data-i18n="register.submit">إنشاء حساب</button>
+
+          <div id="msg" class="alert" hidden></div>
+
+          <div class="field" style="margin-top:14px">
+            <div class="row">
+              <div class="grow"></div>
+              <a class="mini" href="login.html" data-i18n="register.to_login"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/intlTelInput.min.js"></script>
+  <script type="module" src="assets/i18n.js"></script>
+  <script type="module" src="assets/register.js"></script>
+</body>
+</html>
